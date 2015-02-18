@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.actuate.istudio.analysis.model:Project xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.actuate.istudio.analysis.model="http:///com.actuate.istudio.analysis.model.ecore" name="ChicagoCrime">
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="ChicagoCrimeCluster.rptdesign" path="/ChicagoCrime/Report Designs/ChicagoCrimeCluster.rptdesign">
+    <dataMap key="//@files.2" value="1"/>
+    <dataSets name="Data Set1">
+      <columns name="Crime Date Time"/>
+      <columns name="Primary Type"/>
+      <columns name="Description"/>
+      <columns name="Arrest"/>
+      <columns name="Domestic"/>
+      <columns name="Ward"/>
+      <columns name="Latitude"/>
+      <columns name="Longitude"/>
+      <columns name="CrimeTypeNum" expression="switch (row[&quot;Primary Type&quot;] )&#xD;&#xA;{&#xD;&#xA;&#x9;case &quot;THEFT&quot;: 27; break;&#xD;&#xA;&#x9;case &quot;BATTERY&quot;: 26; break;&#xD;&#xA;&#x9;case &quot;NARCOTICS&quot;: 25; break;&#xD;&#xA;&#x9;case &quot;CRIMINAL DAMAGE&quot;: 24; break;&#xD;&#xA;&#x9;case &quot;OTHER OFFENSE&quot;: 23; break;&#xD;&#xA;&#x9;case &quot;ASSAULT&quot;: 22; break;&#xD;&#xA;&#x9;case &quot;DECEPTIVE PRACTICE&quot;: 21; break;&#xD;&#xA;&#x9;case &quot;BURGLARY&quot;: 20; break;&#xD;&#xA;&#x9;case &quot;MOTOR VEHICLE THEFT&quot;: 19; break;&#xD;&#xA;&#x9;case &quot;ROBBERY&quot;: 18; break;&#xD;&#xA;&#x9;case &quot;CRIMINAL TRESPASS&quot;: 17; break;&#xD;&#xA;&#x9;case &quot;WEAPONS VIOLATION&quot;: 16; break;&#xD;&#xA;&#x9;case &quot;OFFENSE INVOLVING CHILDREN&quot;: 15; break;&#xD;&#xA;&#x9;case &quot;PUBLIC PEACE VIOLATION&quot;: 14; break;&#xD;&#xA;&#x9;case &quot;CRIM SEXUAL ASSAULT&quot;: 13; break;&#xD;&#xA;&#x9;case &quot;SEX OFFENBSE&quot;: 12; break;&#xD;&#xA;&#x9;case &quot;PROSTITUTION&quot;: 11; break;&#xD;&#xA;&#x9;case &quot;HOMICIDE&quot;: 10; break;&#xD;&#xA;&#x9;case &quot;LIQUOR LAW VIOLATION&quot;: 9; break;&#xD;&#xA;&#x9;case &quot;ARSON&quot;: 8; break;&#xD;&#xA;&#x9;case &quot;KIDNAPPING&quot;: 7; break;&#xD;&#xA;&#x9;case &quot;INTIMIDATION&quot;: 6; break;&#xD;&#xA;&#x9;case &quot;STALKING&quot;: 5; break;&#xD;&#xA;&#x9;case &quot;OBSENITY&quot;: 4; break;&#xD;&#xA;&#x9;case &quot;GAMBLING&quot;: 3; break;&#xD;&#xA;&#x9;case &quot;INTERFERENCE WITH PUBLIC OFFICIAL&quot;: 2; break;&#xD;&#xA;&#x9;case null : 0; break;&#xD;&#xA;&#xD;&#xA;}"/>
+      <columns name="ShowType" expression="if (row[&quot;Primary Type&quot;] == null) { &quot;POLICE STATION&quot; } else {row[&quot;Primary Type&quot;]}"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:DataDesign" name="Chicago Crimes Since 2001.datadesign" path="/ChicagoCrime/Data Objects/Chicago Crimes Since 2001.datadesign">
+    <dataSets name="Chicago Crimes Since 2001">
+      <columns name="ID"/>
+      <columns name="Case Number"/>
+      <columns name="Crime Date Time"/>
+      <columns name="Block"/>
+      <columns name="IUCR"/>
+      <columns name="Primary Type"/>
+      <columns name="Description"/>
+      <columns name="Location Description"/>
+      <columns name="Arrest"/>
+      <columns name="Domestic"/>
+      <columns name="Beat"/>
+      <columns name="District"/>
+      <columns name="Ward"/>
+      <columns name="Community Area"/>
+      <columns name="FBI Code"/>
+      <columns name="X Coordinate"/>
+      <columns name="Y Coordinate"/>
+      <columns name="Year"/>
+      <columns name="Updated On"/>
+      <columns name="Latitude"/>
+      <columns name="Longitude"/>
+      <columns name="Location"/>
+      <columns name="Month" expression="BirtDateTime.month(row[&quot;Crime Date Time&quot;])"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:Data" name="Chicago Crimes Since 2001.data" path="/ChicagoCrime/Data Objects/Chicago Crimes Since 2001.data">
+    <targetReportsMap key="//@files.0" value="1"/>
+    <targetDashboardsMap key="//@files.3" value="1"/>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="NeighborhoodSearch.dashboard" path="/ChicagoCrime/Dashboards/NeighborhoodSearch.dashboard">
+    <dataMap key="//@files.2" value="1"/>
+  </files>
+</com.actuate.istudio.analysis.model:Project>

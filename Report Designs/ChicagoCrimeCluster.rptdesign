@@ -1,0 +1,1539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150206-1039 Build &lt;4.2.3.v20150206-1039></property>
+    <xml-property name="externalMetadata">
+        <external-datamarts>
+            <datamart-node location="file:/C:/Users/ActuateUser/git/Team2/Data%20Objects/Chicago%20Crimes%20Since%202001.data">
+                <reference-elements>Data Source;</reference-elements>
+                <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+                    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20140910-0330 Build &lt;4.2.3.v20140910-0330></property>
+                    <data-sources>
+                        <oda-data-source extensionID="org.eclipse.datatools.connectivity.oda.flatfile" name="Chicago Crimes CSV" id="2">
+                            <property name="HOME">Data/</property>
+                            <property name="DELIMTYPE">COMMA</property>
+                            <property name="CHARSET">UTF-8</property>
+                            <property name="INCLCOLUMNNAME">YES</property>
+                            <property name="INCLTYPELINE">NO</property>
+                            <property name="TRAILNULLCOLS">NO</property>
+                        </oda-data-source>
+                    </data-sources>
+                    <data-sets>
+                        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Chicago Crimes Since 2001" id="3">
+                            <list-property name="computedColumns">
+                                <structure>
+                                    <property name="name">Month</property>
+                                    <expression name="expression" type="javascript">BirtDateTime.month(row["Crime Date Time"])</expression>
+                                    <property name="dataType">integer</property>
+                                </structure>
+                            </list-property>
+                            <list-property name="columnHints">
+                                <structure>
+                                    <property name="columnName">ID</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">ID</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Case Number</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Case Number</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Crime Date Time</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Crime Date Time</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Block</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Block</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">IUCR</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">IUCR</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Primary Type</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Primary Type</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Description</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Description</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Location Description</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Location Description</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Arrest</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Arrest</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Domestic</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Domestic</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Beat</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Beat</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">District</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">District</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Ward</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Ward</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Community Area</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Community Area</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">FBI Code</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">FBI Code</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">X Coordinate</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">X Coordinate</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Y Coordinate</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Y Coordinate</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Year</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="heading">Year</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Updated On</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Updated On</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Latitude</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Latitude</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Longitude</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Longitude</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Location</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="heading">Location</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">Month</property>
+                                    <property name="analysis">measure</property>
+                                </structure>
+                            </list-property>
+                            <list-property name="filter">
+                                <structure>
+                                    <property name="operator">eq</property>
+                                    <expression name="expr" type="javascript">row["Month"]</expression>
+                                    <simple-property-list name="value1">
+                                        <value type="javascript">1</value>
+                                    </simple-property-list>
+                                </structure>
+                            </list-property>
+                            <list-property name="parameters"/>
+                            <structure name="cachedMetaData">
+                                <list-property name="resultSet">
+                                    <structure>
+                                        <property name="position">1</property>
+                                        <property name="name">ID</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">2</property>
+                                        <property name="name">Case Number</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">3</property>
+                                        <property name="name">Crime Date Time</property>
+                                        <property name="dataType">date-time</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">4</property>
+                                        <property name="name">Block</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">5</property>
+                                        <property name="name">IUCR</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">6</property>
+                                        <property name="name">Primary Type</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">7</property>
+                                        <property name="name">Description</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">8</property>
+                                        <property name="name">Location Description</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">9</property>
+                                        <property name="name">Arrest</property>
+                                        <property name="dataType">boolean</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">10</property>
+                                        <property name="name">Domestic</property>
+                                        <property name="dataType">boolean</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">11</property>
+                                        <property name="name">Beat</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">12</property>
+                                        <property name="name">District</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">13</property>
+                                        <property name="name">Ward</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">14</property>
+                                        <property name="name">Community Area</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">15</property>
+                                        <property name="name">FBI Code</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">16</property>
+                                        <property name="name">X Coordinate</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">17</property>
+                                        <property name="name">Y Coordinate</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">18</property>
+                                        <property name="name">Year</property>
+                                        <property name="dataType">integer</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">19</property>
+                                        <property name="name">Updated On</property>
+                                        <property name="dataType">date-time</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">20</property>
+                                        <property name="name">Latitude</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">21</property>
+                                        <property name="name">Longitude</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">22</property>
+                                        <property name="name">Location</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">23</property>
+                                        <property name="name">Month</property>
+                                        <property name="dataType">integer</property>
+                                    </structure>
+                                </list-property>
+                            </structure>
+                            <property name="dataSource">Chicago Crimes CSV</property>
+                            <list-property name="resultSet">
+                                <structure>
+                                    <property name="position">1</property>
+                                    <property name="name">ID</property>
+                                    <property name="nativeName">ID</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">2</property>
+                                    <property name="name">Case Number</property>
+                                    <property name="nativeName">Case Number</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">3</property>
+                                    <property name="name">Crime Date Time</property>
+                                    <property name="nativeName">Crime Date Time</property>
+                                    <property name="dataType">date-time</property>
+                                    <property name="nativeDataType">93</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">4</property>
+                                    <property name="name">Block</property>
+                                    <property name="nativeName">Block</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">5</property>
+                                    <property name="name">IUCR</property>
+                                    <property name="nativeName">IUCR</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">6</property>
+                                    <property name="name">Primary Type</property>
+                                    <property name="nativeName">Primary Type</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">7</property>
+                                    <property name="name">Description</property>
+                                    <property name="nativeName">Description</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">8</property>
+                                    <property name="name">Location Description</property>
+                                    <property name="nativeName">Location Description</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">9</property>
+                                    <property name="name">Arrest</property>
+                                    <property name="nativeName">Arrest</property>
+                                    <property name="dataType">boolean</property>
+                                    <property name="nativeDataType">16</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">10</property>
+                                    <property name="name">Domestic</property>
+                                    <property name="nativeName">Domestic</property>
+                                    <property name="dataType">boolean</property>
+                                    <property name="nativeDataType">16</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">11</property>
+                                    <property name="name">Beat</property>
+                                    <property name="nativeName">Beat</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">12</property>
+                                    <property name="name">District</property>
+                                    <property name="nativeName">District</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">13</property>
+                                    <property name="name">Ward</property>
+                                    <property name="nativeName">Ward</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">14</property>
+                                    <property name="name">Community Area</property>
+                                    <property name="nativeName">Community Area</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">15</property>
+                                    <property name="name">FBI Code</property>
+                                    <property name="nativeName">FBI Code</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">16</property>
+                                    <property name="name">X Coordinate</property>
+                                    <property name="nativeName">X Coordinate</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">17</property>
+                                    <property name="name">Y Coordinate</property>
+                                    <property name="nativeName">Y Coordinate</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">18</property>
+                                    <property name="name">Year</property>
+                                    <property name="nativeName">Year</property>
+                                    <property name="dataType">integer</property>
+                                    <property name="nativeDataType">4</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">19</property>
+                                    <property name="name">Updated On</property>
+                                    <property name="nativeName">Updated On</property>
+                                    <property name="dataType">date-time</property>
+                                    <property name="nativeDataType">93</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">20</property>
+                                    <property name="name">Latitude</property>
+                                    <property name="nativeName">Latitude</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">21</property>
+                                    <property name="name">Longitude</property>
+                                    <property name="nativeName">Longitude</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">22</property>
+                                    <property name="name">Location</property>
+                                    <property name="nativeName">Location</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                            </list-property>
+                            <xml-property name="queryText"><![CDATA[select "ID", "Case Number", "Date", "Block", "IUCR", "Primary Type", "Description", "Location Description", "Arrest", "Domestic", "Beat", "District", "Ward", "Community Area", "FBI Code", "X Coordinate", "Y Coordinate", "Year", "Updated On", "Latitude", "Longitude", "Location" from "Crimes_-_2014.csv" : {"ID","ID",STRING;"Case Number","Case Number",STRING;"Crime Date Time","Date",TIMESTAMP;"Block","Block",STRING;"IUCR","IUCR",STRING;"Primary Type","Primary Type",STRING;"Description","Description",STRING;"Location Description","Location Description",STRING;"Arrest","Arrest",BOOLEAN;"Domestic","Domestic",BOOLEAN;"Beat","Beat",STRING;"District","District",STRING;"Ward","Ward",STRING;"Community Area","Community Area",STRING;"FBI Code","FBI Code",STRING;"X Coordinate","X Coordinate",STRING;"Y Coordinate","Y Coordinate",STRING;"Year","Year",INT;"Updated On","Updated On",TIMESTAMP;"Latitude","Latitude",STRING;"Longitude","Longitude",STRING;"Location","Location",STRING}]]></xml-property>
+                            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ID</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ID</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Case Number</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Case Number</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Crime Date Time</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Crime Date Time</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Block</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Block</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>IUCR</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>IUCR</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Primary Type</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Primary Type</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Description</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Description</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Location Description</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Location Description</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Arrest</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Arrest</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Domestic</design:name>
+              <design:position>10</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Domestic</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Beat</design:name>
+              <design:position>11</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Beat</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>District</design:name>
+              <design:position>12</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>District</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Ward</design:name>
+              <design:position>13</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Ward</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Community Area</design:name>
+              <design:position>14</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Community Area</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>FBI Code</design:name>
+              <design:position>15</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>FBI Code</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>X Coordinate</design:name>
+              <design:position>16</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>X Coordinate</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Y Coordinate</design:name>
+              <design:position>17</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Y Coordinate</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Year</design:name>
+              <design:position>18</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Year</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Updated On</design:name>
+              <design:position>19</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Updated On</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Latitude</design:name>
+              <design:position>20</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Latitude</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Longitude</design:name>
+              <design:position>21</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Longitude</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Location</design:name>
+              <design:position>22</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Location</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+                        </oda-data-set>
+                    </data-sets>
+                    <property name="linkedDataModels">
+                        <linked-data-model name="Data Model" id="4">
+                            <property name="aliasDataSets">
+                                <alias-data-set name="Chicago Crimes Since 2001" id="28">
+                                    <property name="originDataSet">Chicago Crimes Since 2001</property>
+                                </alias-data-set>
+                            </property>
+                            <property name="drillPaths">
+                                <drill-path id="29">
+                                    <text-property name="displayName">Crime Date Time</text-property>
+                                    <simple-property-list name="drillPathColumns">
+                                        <value>dataSetRow["Crime Date Time"]["Year"]</value>
+                                        <value>dataSetRow["Crime Date Time"]["Month"]</value>
+                                        <value>dataSetRow["Crime Date Time"]["DayOfYear"]</value>
+                                    </simple-property-list>
+                                </drill-path>
+                                <drill-path id="30">
+                                    <text-property name="displayName">District-Beat</text-property>
+                                    <simple-property-list name="drillPathColumns">
+                                        <value>dataSetRow["District"]</value>
+                                        <value>dataSetRow["Beat"]</value>
+                                    </simple-property-list>
+                                </drill-path>
+                            </property>
+                            <property name="categories">
+                                <category name="Chicago Crimes Since 2001" id="5">
+                                    <property name="categoryColumns">
+                                        <category-column name="ID" id="6">
+                                            <property name="aliasDataSet">Data Model/Chicago Crimes Since 2001</property>
+                                            <property name="resultSetColumnName">ID</property>
+                                        </category-column>
+                                        <category-column name="Case Number" id="7">
+                                            <property name="aliasDataSet">Data Model/Chicago Crimes Since 2001</property>
+                                            <property name="resultSetColumnName">Case Number</property>
+                                        </category-column>
+                                        <category-column name="Crime Date Time" id="8">
+                                            <property name="aliasDataSet">Data Model/Chicago Crimes Since 2001</property>
+                                            <property name="resultSetColumnName">Crime Date Time</property>
+                                        </category-column>
+                                        <category-column name="Block" id="9">
+                                            <property name="aliasDataSet">Data Model/Chicago Crimes Since 2001</property>
+                                            <property name="resultSetColumnName">Block</property>
+                                        </category-column>
+                                        <category-column name="IUCR" id="10">
+                                            <property name="aliasDataSet">Data Model/Chicago Crimes Since 2001</property>
+                                            <property name="resultSetColumnName">IUCR</property>
+                                        </category-column>
+                                        <category-column name="Primary Type" id="11">
+                                            <property name="aliasDataSet">Data Model/Chicago Crimes Since 2001</property>
+                                            <property name="resultSetColumnName">Primary Type</property>
+                                        </category-column>
+                                        <category-column name="Description" id="12">
+                                            <property name="aliasDataSet">Data Model/Chicago Crimes Since 2001</property>
+                                            <property name="resultSetColumnName">Description</property>
+                                        </category-column>
+                                        <category-column name="Location Description" id="13">
+                                            <property name="aliasDataSet">Data Model/Chicago Crimes Since 2001</property>
+                                            <property name="resultSetColumnName">Location Description</property>
+                                        </category-column>
+                                        <category-column name="Arrest" id="14">
+                                            <property name="aliasDataSet">Data Model/Chicago Crimes Since 2001</property>
+                                            <property name="resultSetColumnName">Arrest</property>
+                                        </category-column>
+                                        <category-column name="Domestic" id="15">
+                                            <property name="aliasDataSet">Data Model/Chicago Crimes Since 2001</property>
+                                            <property name="resultSetColumnName">Domestic</property>
+                                        </category-column>
+                                        <category-column name="Beat" id="16">
+                                            <property name="aliasDataSet">Data Model/Chicago Crimes Since 2001</property>
+                                            <property name="resultSetColumnName">Beat</property>
+                                        </category-column>
+                                        <category-column name="District" id="17">
+                                            <property name="aliasDataSet">Data Model/Chicago Crimes Since 2001</property>
+                                            <property name="resultSetColumnName">District</property>
+                                        </category-column>
+                                        <category-column name="Ward" id="18">
+                                            <property name="aliasDataSet">Data Model/Chicago Crimes Since 2001</property>
+                                            <property name="resultSetColumnName">Ward</property>
+                                        </category-column>
+                                        <category-column name="Community Area" id="19">
+                                            <property name="aliasDataSet">Data Model/Chicago Crimes Since 2001</property>
+                                            <property name="resultSetColumnName">Community Area</property>
+                                        </category-column>
+                                        <category-column name="FBI Code" id="20">
+                                            <property name="aliasDataSet">Data Model/Chicago Crimes Since 2001</property>
+                                            <property name="resultSetColumnName">FBI Code</property>
+                                        </category-column>
+                                        <category-column name="X Coordinate" id="21">
+                                            <property name="aliasDataSet">Data Model/Chicago Crimes Since 2001</property>
+                                            <property name="resultSetColumnName">X Coordinate</property>
+                                        </category-column>
+                                        <category-column name="Y Coordinate" id="22">
+                                            <property name="aliasDataSet">Data Model/Chicago Crimes Since 2001</property>
+                                            <property name="resultSetColumnName">Y Coordinate</property>
+                                        </category-column>
+                                        <category-column name="Year" id="23">
+                                            <property name="aliasDataSet">Data Model/Chicago Crimes Since 2001</property>
+                                            <property name="resultSetColumnName">Year</property>
+                                        </category-column>
+                                        <category-column name="Updated On" id="24">
+                                            <property name="aliasDataSet">Data Model/Chicago Crimes Since 2001</property>
+                                            <property name="resultSetColumnName">Updated On</property>
+                                        </category-column>
+                                        <category-column name="Latitude" id="25">
+                                            <property name="aliasDataSet">Data Model/Chicago Crimes Since 2001</property>
+                                            <property name="resultSetColumnName">Latitude</property>
+                                        </category-column>
+                                        <category-column name="Longitude" id="26">
+                                            <property name="aliasDataSet">Data Model/Chicago Crimes Since 2001</property>
+                                            <property name="resultSetColumnName">Longitude</property>
+                                        </category-column>
+                                        <category-column name="Location" id="27">
+                                            <property name="aliasDataSet">Data Model/Chicago Crimes Since 2001</property>
+                                            <property name="resultSetColumnName">Location</property>
+                                        </category-column>
+                                    </property>
+                                </category>
+                            </property>
+                            <property name="pushDown">true</property>
+                        </linked-data-model>
+                    </property>
+                </datamart>
+            </datamart-node>
+        </external-datamarts>
+    </xml-property>
+    <property name="units">in</property>
+    <property name="theme">ThemesReportItems31.Modern</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">/ThemesReportItems31.rptlibrary</property>
+            <property name="namespace">ThemesReportItems31</property>
+        </structure>
+    </list-property>
+    <parameters>
+        <scalar-parameter name="ShowType" id="152">
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">THEFT</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <data-mart-data-source name="Data Source" id="4">
+            <property name="datamartURL">Data Objects/Chicago Crimes Since 2001</property>
+            <property name="accessType">latest</property>
+        </data-mart-data-source>
+    </data-sources>
+    <data-sets>
+        <data-mart-data-set name="Data Set1" id="147">
+            <list-property name="computedColumns">
+                <structure>
+                    <property name="name">CrimeTypeNum</property>
+                    <expression name="expression" type="javascript">switch (row["Primary Type"] )&#13;
+{&#13;
+	case "THEFT": 27; break;&#13;
+	case "BATTERY": 26; break;&#13;
+	case "NARCOTICS": 25; break;&#13;
+	case "CRIMINAL DAMAGE": 24; break;&#13;
+	case "OTHER OFFENSE": 23; break;&#13;
+	case "ASSAULT": 22; break;&#13;
+	case "DECEPTIVE PRACTICE": 21; break;&#13;
+	case "BURGLARY": 20; break;&#13;
+	case "MOTOR VEHICLE THEFT": 19; break;&#13;
+	case "ROBBERY": 18; break;&#13;
+	case "CRIMINAL TRESPASS": 17; break;&#13;
+	case "WEAPONS VIOLATION": 16; break;&#13;
+	case "OFFENSE INVOLVING CHILDREN": 15; break;&#13;
+	case "PUBLIC PEACE VIOLATION": 14; break;&#13;
+	case "CRIM SEXUAL ASSAULT": 13; break;&#13;
+	case "SEX OFFENBSE": 12; break;&#13;
+	case "PROSTITUTION": 11; break;&#13;
+	case "HOMICIDE": 10; break;&#13;
+	case "LIQUOR LAW VIOLATION": 9; break;&#13;
+	case "ARSON": 8; break;&#13;
+	case "KIDNAPPING": 7; break;&#13;
+	case "INTIMIDATION": 6; break;&#13;
+	case "STALKING": 5; break;&#13;
+	case "OBSENITY": 4; break;&#13;
+	case "GAMBLING": 3; break;&#13;
+	case "INTERFERENCE WITH PUBLIC OFFICIAL": 2; break;&#13;
+	case null : 0; break;&#13;
+&#13;
+}</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">ShowType</property>
+                    <expression name="expression" type="javascript">if (row["Primary Type"] == null) { "POLICE STATION" } else {row["Primary Type"]}</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Crime Date Time</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Crime Date Time</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Primary Type</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Primary Type</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Description</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Description</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Arrest</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Arrest</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Domestic</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Domestic</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Ward</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Ward</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Latitude</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Latitude</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Longitude</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Longitude</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">CrimeTypeNum</property>
+                    <property name="analysis">measure</property>
+                </structure>
+                <structure>
+                    <property name="columnName">ShowType</property>
+                    <property name="analysis">attribute</property>
+                </structure>
+            </list-property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">in</property>
+                    <expression name="expr" type="javascript">row["ShowType"]</expression>
+                    <simple-property-list name="value1">
+                        <value>params["ShowType"].value</value>
+                    </simple-property-list>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Crime Date Time</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Primary Type</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Description</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">Arrest</property>
+                        <property name="dataType">boolean</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Domestic</property>
+                        <property name="dataType">boolean</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">Ward</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">Latitude</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">Longitude</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">CrimeTypeNum</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">ShowType</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <property name="dataObject">Data Model</property>
+            <list-property name="selectedColumns">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Crime Date Time</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Primary Type</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Description</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">Arrest</property>
+                    <property name="dataType">boolean</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">Domestic</property>
+                    <property name="dataType">boolean</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">Ward</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">Latitude</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">Longitude</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+        </data-mart-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="orientation">auto</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <extended-item extensionName="HTMLControl" id="142">
+            <method name="clientOnCreate"><![CDATA[// This example demonstrates how create the map and markers using Google Map JSAPI
+
+/* ----------------------------------------------------------------------------------------- */
+/* This is the configuration object for creating the chart. You modify it to map your own data.
+ * See inline comments for more details.
+ */
+
+// Use head.js to load the MarkerClusterer javascript file
+head.load("http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/src/markerclusterer_compiled.js");
+
+var config = {
+	/*
+	 * The Google map key. You should provide your own key to use the Google Map
+	 * JSAPI.
+	 */
+	googleMapKey : "",
+
+	/*
+	 * Provide the column binding names as shown below. If not all
+	 * column names are specified, the template will use the sample data instead.
+	 */
+
+	/* Specify the column name as it appears in the data set.
+	* Example: 
+	* 	latitudeColumn : "LATITUDE"
+	*/
+
+	/* the column name for marker latitude value */
+	latitudeColumn : "Latitude",
+	/* the column name for marker longitude value */
+	longitudeColumn : "Longitude",
+	/* the column name for marker label text */
+	markerLabelColumn : "Description",
+	/* specify the default center coornidates for the map */
+	mapCenter : {
+		/* the latitude for the center */
+		lat : 41.8500000,
+		/* the longitude for the center */
+		lng : -87.6500000
+	}
+};
+
+/* --------------------------------------------------------------------------------------- */
+/*
+ * Below is the implementation code for the example. In most cases you do not need to
+ * modify it, unless you want to change the chart style, or behavior. 
+ * Changing the config object above is sufficient. 
+ */
+ 
+// The Google Map jsapi url. You may provide your own api key and callback
+// function name.
+var googleMapScriptUrl = "https://maps.googleapis.com/maps/api/js?key="
+		+ config.googleMapKey + "&amp;sensor=false&amp;callback=initialize";
+
+// get the container id
+var id = this.getId();
+var map = null;
+var lastInfowindow = null;
+var customViz = this;
+customViz.setPrintTimeOut(5000);
+var data = this.getData();
+
+// Create marker array for use in MarkerClusterer object
+var markers = [];
+
+config.testMode = !data || !data.columns || data.columns.length == 0;
+
+function getMarkerData() {
+
+	if (config.testMode) {
+
+		// use sample data
+		return [ [ 36.169202, -115.140597, 'Las&amp;nbsp;Vegas' ],
+				[ 37.78008, -122.420168, 'San&amp;nbsp;Francisco' ],
+				[ 37.334807, -121.888128, 'San&amp;nbsp;Jose' ],
+				[ 32.71576, -117.163817, 'San&amp;nbsp;Diego' ],
+				[ 34.052238, -118.243344, 'Los&amp;nbsp;Angeles' ],
+				[ 40.713054, -74.007228, 'NYC' ],
+				[ 42.358894, -71.056742, 'Boston' ],
+				[ 39.951061, -75.16562, 'Philadelphia' ],
+				[ 41.308252, -72.924161, 'New&amp;nbsp;Haven' ],
+				[ 40.731507, -74.174388, 'Newark' ] ];
+	} else {
+
+		// use data bindings, make sure the column names in config is properly
+		// set
+		var data = customViz.getData();
+
+		if (!data || !data.rows || !data.columns) {
+			return [];
+		}
+
+		// gets the index for columns
+		var i1 = -1, i2 = -1, i3 = -1; i4=-1;
+		for (var i = 0; i < data.columns.length; i++) {
+			if (data.columns[i] == config.latitudeColumn) {
+				i1 = i;
+			} else if (data.columns[i] == config.longitudeColumn) {
+				i2 = i;
+			} else if (data.columns[i] == config.markerLabelColumn) {
+				i3 = i;
+			} else if (data.columns[i] == "CrimeTypeNum") {
+			   i4=i;
+			}
+		}
+
+		if (i1 < 0 || i2 < 0 || i3 < 0 || i4 < 0) {
+			return [];
+		}
+
+		// populate marker data by column index
+		var markerData = [];
+		for (var i = 0; i < data.rows.length; i++) {
+			var row = data.rows[i];
+			markerData.push([ row[i1], row[i2], row[i3], row[i4] ]);
+		}
+
+		return markerData;
+	}
+}
+
+// load map jsapi
+function loadMap(scriptUrl) {
+
+	if (window.mapApiLoaded) {
+		return;
+	}
+
+	// mark the flag to prevent duplicate loading
+	window.mapApiLoaded = true;
+
+	// make sure we only load the jsapi once
+	var script = document.createElement('script');
+	script.type = 'text/javascript';
+	script.src = scriptUrl;
+	document.body.appendChild(script);
+}
+
+// create the map
+function createMap() {
+	var mapOptions = {
+		zoom : 11,
+		center : new google.maps.LatLng(config.mapCenter.lat,
+				config.mapCenter.lng),
+		scrollwheel : false,
+		mapTypeId : google.maps.MapTypeId.ROADMAP,
+		navigationControlOptions : {
+			style : google.maps.NavigationControlStyle.SMALL,
+			position : google.maps.ControlPosition.TOP_RIGHT
+		}
+	};
+	map = new google.maps.Map(document.getElementById(id), mapOptions);
+	createMarker();
+	
+	customViz.setDelegate(map);
+	// Add marker cluster capability using the MarkerClusterer object
+	var mc = new MarkerClusterer(map, markers);
+	
+	// CreateMarker() calls google api that has untrackable async js call itself. 
+	// It is not safe to call setPrintReady() here rather we need a timer to control it.
+//	window.setTimeout(function(){customViz.setPrintReady()} , 3000);
+}
+
+// create markers
+function createMarker() {
+	var data = getMarkerData();
+
+	if (!data || data.length == 0) {
+		return;
+	}
+
+	for (var i = 0; i < data.length; i++) {
+	    var iconurl =  'http://maps.google.com/mapfiles/ms/icons/red-dot.png';
+	    if (data[i][3] == 0) { iconurl = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'; }
+	    else if (data[i][3] == 26) { iconurl = 'http://www.crimemapping.com/images/map/crime-types/legend/assault.png'; }
+	    else if (data[i][3] == 25) { iconurl = 'http://www.crimemapping.com/images/map/crime-types/legend/drugs-alcohol-violations.png'; }
+	    else if (data[i][3] == 24) { iconurl = 'http://www.crimemapping.com/images/map/crime-types/legend/vandalism.png'; }
+	    else if (data[i][3] == 23) { iconurl = 'http://www.crimemapping.com/images/map/crime-types/legend/disturbing-the-peace.png'; }
+	    else if (data[i][3] == 22) { iconurl = 'http://www.crimemapping.com/images/map/crime-types/legend/assault.png'; }
+	    else if (data[i][3] == 21) { iconurl = 'http://www.crimemapping.com/images/map/crime-types/legend/fraud.png'; }
+	    else if (data[i][3] == 20) { iconurl = 'http://www.crimemapping.com/images/map/crime-types/legend/burglary.png'; }
+	    else if (data[i][3] == 19) { iconurl = 'http://www.crimemapping.com/images/map/crime-types/legend/vehicle-break-in-theft.png'; }
+	    else if (data[i][3] == 18) { iconurl = 'http://www.crimemapping.com/images/map/crime-types/legend/theft-larceny.png'; }
+	    else if (data[i][3] == 17) { iconurl = 'http://www.crimemapping.com/images/map/crime-types/legend/disturbing-the-peace.png'; }
+	    else if (data[i][3] == 15) { iconurl = 'http://www.crimemapping.com/images/map/crime-types/legend/assault.png'; }
+	    else if (data[i][3] == 14) { iconurl = 'http://www.crimemapping.com/images/map/crime-types/legend/disturbing-the-peace.png'; }
+	    else if (data[i][3] == 13) { iconurl = 'http://www.crimemapping.com/images/map/crime-types/legend/assault.png'; }
+	    else if (data[i][3] == 10) { iconurl = 'http://www.crimemapping.com/images/map/crime-types/legend/homicide.png'; }
+	    else if (data[i][3] == 8) { iconurl = 'http://www.crimemapping.com/images/map/crime-types/legend/arson.png'; }
+	  //  else if (data[i][3] == 1) { iconurl = 'http://www.crimemapping.com/images/map/crime-types/legend/.png'; }
+	    else { iconurl = 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'; }
+	    
+		var marker = new google.maps.Marker({
+			map : map,
+			position : new google.maps.LatLng(data[i][0], data[i][1]),
+			icon: iconurl
+		});
+		createMarkerInfoWindow(marker, data[i][2]);
+		
+		// Add marker to marker array for MarkerClusterer object
+		markers.push(marker);
+	}
+	//alert('markers array length is: ' + markers.length);
+}
+
+// create the popup info window for each marker
+function createMarkerInfoWindow(marker, info) {
+	var contentString = '<div><b>' + info + '</b></div>'
+	var infowindow = new google.maps.InfoWindow({
+		content : contentString
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		if (lastInfowindow != null) {
+			lastInfowindow.close();
+		}
+		infowindow.open(map, marker);
+		lastInfowindow = infowindow;
+	});
+}
+
+// check whether Google Map jsapi already loaded, duplicate loading may cause
+// issues.
+if (window.mapApiLoaded) {
+	// directly create the map
+	createMap();
+} else {
+
+	// due to the restriction of Google Map JSAPI, you must use a global
+	// callback function, here we use "initialize". change the name if there's
+	// any conflict
+	window.initialize = function() {
+		createMap();
+	};
+
+	// load jsapi and use callback to create the map
+	loadMap(googleMapScriptUrl);
+}
+]]></method>
+            <property name="height">6.770833333333333in</property>
+            <property name="width">100%</property>
+            <property name="dataSet">Data Set1</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">Crime Date Time</property>
+                    <text-property name="displayName">Crime Date Time</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Crime Date Time"]</expression>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="name">Primary Type</property>
+                    <text-property name="displayName">Primary Type</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Primary Type"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Description</property>
+                    <text-property name="displayName">Description</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Description"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Arrest</property>
+                    <text-property name="displayName">Arrest</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Arrest"]</expression>
+                    <property name="dataType">boolean</property>
+                </structure>
+                <structure>
+                    <property name="name">Domestic</property>
+                    <text-property name="displayName">Domestic</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Domestic"]</expression>
+                    <property name="dataType">boolean</property>
+                </structure>
+                <structure>
+                    <property name="name">Ward</property>
+                    <text-property name="displayName">Ward</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Ward"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Latitude</property>
+                    <text-property name="displayName">Latitude</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Latitude"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Longitude</property>
+                    <text-property name="displayName">Longitude</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Longitude"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">CrimeTypeNum</property>
+                    <text-property name="displayName">CrimeTypeNum</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CrimeTypeNum"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">ShowType</property>
+                    <text-property name="displayName">ShowType</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ShowType"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <property name="displayName">Google Map</property>
+        </extended-item>
+    </body>
+</report>
