@@ -27,20 +27,20 @@
             <property name="tabs">
                 <tab-element name="180a3b33-87c3-4efd-af27-ac689d7b111c" id="3">
                     <property name="title">Neighborhood Search</property>
-                    <property name="backgroundColor">RGB(255,255,255)</property>
+                    <property name="backgroundImage">/Applications/ChicagoCrime/Report Designs/chicago1.jpg</property>
                     <property name="sections">
                         <section id="4">
                             <property name="width">82.18978102189782%</property>
                             <property name="gadgets">
                                 <gadget name="Gadget_cb1f1419-adfe-4efe-a876-be284f2fbd4f" id="33">
-                                    <property name="height">680px</property>
+                                    <property name="height">651px</property>
                                     <property name="title">Report - ChicagoSafetySearch</property>
                                     <property name="externalGadgetURI">^/Report Designs/ChicagoCrimeCluster.rptdesign</property>
                                     <property name="showTitle">true</property>
                                     <property name="showBorder">false</property>
                                     <property name="zIndex">2</property>
                                     <property name="showScrollBar">false</property>
-                                    <property name="height">680px</property>
+                                    <property name="height">651px</property>
                                     <property name="caption">
                                         <gadget-caption id="35">
                                             <property name="showCaption">false</property>
@@ -128,13 +128,13 @@
                             <property name="width">17.810218978102192%</property>
                             <property name="gadgets">
                                 <gadget name="Gadget_0f8ca10e-9b24-42a7-8a3f-07da4e19a096" id="43">
-                                    <property name="height">635px</property>
+                                    <property name="height">608px</property>
                                     <property name="title">Show Crime</property>
                                     <property name="showTitle">true</property>
                                     <property name="showBorder">true</property>
                                     <property name="zIndex">3</property>
                                     <property name="showScrollBar">false</property>
-                                    <property name="height">635px</property>
+                                    <property name="height">608px</property>
                                     <property name="caption">
                                         <gadget-caption id="44">
                                             <property name="showCaption">true</property>
