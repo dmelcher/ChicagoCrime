@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201603302314</property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201804241733</property>
     <property name="units">in</property>
     <property name="theme">ThemesReportItems31.Modern</property>
     <property name="iconFile">/templates/blank_report.gif</property>
@@ -19,6 +19,9 @@
             <property name="isRequired">true</property>
             <property name="dataType">string</property>
             <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">ARSON</value>
+            </simple-property-list>
             <list-property name="selectionList">
                 <structure>
                     <property name="value">ARSON</property>
@@ -318,15 +321,9 @@
  */
 
 // Use head.js to load the MarkerClusterer javascript file
-head.load("/iportal/ChicagoCrime/markerclusterer.js");
+//head.load("/iportal/ChicagoCrime/markerclusterer.js");
 
 var config = {
-	/*
-	 * The Google map key. You should provide your own key to use the Google Map
-	 * JSAPI.
-	 */
-	googleMapKey : "",
-
 	/*
 	 * Provide the column binding names as shown below. If not all
 	 * column names are specified, the template will use the sample data instead.
@@ -361,9 +358,6 @@ var config = {
  
 // The Google Map jsapi url. You may provide your own api key and callback
 // function name.
-var googleMapScriptUrl = "https://maps.googleapis.com/maps/api/js?key="
-		+ config.googleMapKey + "&amp;sensor=false&amp;callback=initialize";
-
 // get the container id
 var id = this.getId();
 var map = null;
@@ -430,24 +424,6 @@ function getMarkerData() {
 		return markerData;
 	}
 }
-
-// load map jsapi
-function loadMap(scriptUrl) {
-
-	if (window.mapApiLoaded) {
-		return;
-	}
-
-	// mark the flag to prevent duplicate loading
-	window.mapApiLoaded = true;
-
-	// make sure we only load the jsapi once
-	var script = document.createElement('script');
-	script.type = 'text/javascript';
-	script.src = scriptUrl;
-	document.body.appendChild(script);
-}
-
 // create the map
 function createMap() {
 	var mapOptions = {
@@ -469,10 +445,6 @@ function createMap() {
 	//var mc = new MarkerClusterer(map, markers);
 	var mc = new MarkerClusterer(map, markers, { imagePath: '/iportal/ChicagoCrime/img/m' });
 	
-	
-	// CreateMarker() calls google api that has untrackable async js call itself. 
-	// It is not safe to call setPrintReady() here rather we need a timer to control it.
-//	window.setTimeout(function(){customViz.setPrintReady()} , 3000);
 }
 
 // create markers
@@ -533,23 +505,22 @@ function createMarkerInfoWindow(marker, info) {
 	});
 }
 
-// check whether Google Map jsapi already loaded, duplicate loading may cause
-// issues.
-if (window.mapApiLoaded) {
-	// directly create the map
-	createMap();
-} else {
+var callback = function() {
 
-	// due to the restriction of Google Map JSAPI, you must use a global
-	// callback function, here we use "initialize". change the name if there's
-	// any conflict
-	window.initialize = function() {
-		createMap();
-	};
+	console.log ('here');
+	debugger;
+	
+google.charts.load('current', {
+	'packages' : [ 'map' ],
+	'mapsApiKey': 'AIzaSyDX81_IA8XWMWAOLNf5ciNvaBHbS1PGrqY'
+	 });
+google.charts.setOnLoadCallback( createMap );	
 
-	// load jsapi and use callback to create the map
-	loadMap(googleMapScriptUrl);
 }
+
+head.load ('https://maps.googleapis.com/maps/api/js?key=AIzaSyDi-A-jkIkioXs40iP63CP1Y_A9Es7De1A','/iportal/ChicagoCrime/markerclusterer.js','https://www.gstatic.com/charts/loader.js','https://www.google.com/jsapi', callback);
+
+
 ]]></method>
             <property name="height">6.770833333333333in</property>
             <property name="width">100%</property>

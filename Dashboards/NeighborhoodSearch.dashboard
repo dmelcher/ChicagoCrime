@@ -33,7 +33,6 @@
                             <property name="width">82.18978102189782%</property>
                             <property name="gadgets">
                                 <gadget name="Gadget_cb1f1419-adfe-4efe-a876-be284f2fbd4f" id="33">
-                                    <property name="height">651px</property>
                                     <property name="title">Report - ChicagoSafetySearch</property>
                                     <property name="externalGadgetURI">^/Report Designs/ChicagoCrimeCluster.rptdesign</property>
                                     <property name="showTitle">true</property>
@@ -93,7 +92,6 @@
                                     </property>
                                 </gadget>
                                 <gadget name="f7d977a8-310c-4541-8aae-8cccb96c6fa8" id="36">
-                                    <property name="height">150px</property>
                                     <property name="zIndex">1</property>
                                     <property name="isVisible">false</property>
                                     <property name="height">150px</property>
@@ -128,7 +126,6 @@
                             <property name="width">17.810218978102192%</property>
                             <property name="gadgets">
                                 <gadget name="Gadget_0f8ca10e-9b24-42a7-8a3f-07da4e19a096" id="43">
-                                    <property name="height">608px</property>
                                     <property name="title">Show Crime</property>
                                     <property name="showTitle">true</property>
                                     <property name="showBorder">true</property>
@@ -139,7 +136,7 @@
                                         <gadget-caption id="44">
                                             <property name="showCaption">true</property>
                                             <property name="horizontalAlignment">left</property>
-                                            <property name="fontFamily">"Source Sans Pro"</property>
+                                            <property name="fontFamily">"Lato"</property>
                                             <property name="fontSize">18pt</property>
                                             <property name="fontWeight">normal</property>
                                             <property name="fontStyle">normal</property>
@@ -155,6 +152,9 @@
                                             <simple-property-list name="columnNames">
                                                 <value>Primary Type</value>
                                                 <value>Primary Type</value>
+                                            </simple-property-list>
+                                            <simple-property-list name="selectedValues">
+                                                <value>HOMICIDE</value>
                                             </simple-property-list>
                                             <property name="allowMultiValue">true</property>
                                             <property name="enableSearch">false</property>
